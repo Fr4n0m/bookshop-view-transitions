@@ -1,7 +1,7 @@
 export const books = [
 	{
 		id: 'GOT-1',
-		title: 'JUEGO DE TRONOS (CANCIÓN DE HIELO Y FUEGO 1)',
+		title: 'JUEGO DE TRONOS',
 		image: 'https://imagessl4.casadellibro.com/a/l/s7/34/9788466374934.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
@@ -10,7 +10,7 @@ export const books = [
 	},
 	{
 		id: 'GOT-2',
-		title: 'CHOQUE DE REYES (CANCIÓN DE HIELO Y FUEGO 2)',
+		title: 'CHOQUE DE REYES',
 		image: 'https://imagessl1.casadellibro.com/a/l/s7/41/9788466374941.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
@@ -19,7 +19,7 @@ export const books = [
 	},
 	{
 		id: 'GOT-3',
-		title: 'TORMENTA DE ESPADAS (CANCIÓN DE HIELO Y FUEGO 3)',
+		title: 'TORMENTA DE ESPADAS',
 		image: 'https://imagessl8.casadellibro.com/a/l/s7/58/9788466374958.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
@@ -28,7 +28,7 @@ export const books = [
 	},
 	{
 		id: 'GOT-4',
-		title: 'FESTÍN DE CUERVOS (CANCIÓN DE HIELO Y FUEGO 4)',
+		title: 'FESTÍN DE CUERVOS',
 		image: 'https://imagessl5.casadellibro.com/a/l/s7/65/9788466374965.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
@@ -37,7 +37,7 @@ export const books = [
 	},
 	{
 		id: 'GOT-5',
-		title: 'DANZA DE DRAGONES (CANCIÓN DE HIELO Y FUEGO 5)',
+		title: 'DANZA DE DRAGONES',
 		image: 'https://imagessl2.casadellibro.com/a/l/s7/72/9788466374972.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
@@ -46,7 +46,7 @@ export const books = [
 	},
 	{
 		id: 'GOT-6',
-		title: 'FUEGO Y SANGRE (CANCIÓN DE HIELO Y FUEGO)',
+		title: 'FUEGO Y SANGRE',
 		image: 'https://imagessl3.casadellibro.com/a/l/s7/93/9788466356893.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
