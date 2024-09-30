@@ -12,7 +12,7 @@ export interface Props {
 const { id, title, image, description, author, authorLink, price } = Astro.props
 ---
 
-<a class='inline-block' href={`/${id}`}>
+<a class='inline-block book' href={`/${id}`}>
 	<img
 		class='aspect-[552/839] h-full object-cover w-full max-w-full rounded hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl'
 		src={image}
@@ -21,11 +21,15 @@ const { id, title, image, description, author, authorLink, price } = Astro.props
 	/>
 	<div class='bottom-0 left-0 p-2 text-black'>
 		<h2 class='text-lg font-bold hover:text-black/70'>{title}</h2>
-		<p class='text-sm'>{description}</p>
+		<p class='text-sm mt-3 italic'>{description}</p>
 		<p class='text-sm text-black'>
-			By&nbsp;
+			By
 			<a class='text-black font-bold hover:underline' href={authorLink}>{author}</a>
 		</p>
-		<p class='text-3xl text-red-600 font-bold'>{price}€</p>
+		<p
+			class='text-3xl text-red-700 font-bold font-serif drop-shadow-md shadow-red-950 flex justify-end'
+		>
+			{price}€
+		</p>
 	</div>
 </a>
