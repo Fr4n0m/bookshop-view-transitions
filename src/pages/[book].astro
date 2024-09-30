@@ -37,7 +37,13 @@ if (!info) {
 				<span class='sr-only'>Icon description</span>
 			</a>
 
-			<Title />
+			<h1
+				class='scale-75 font-black uppercase text-4xl md:text-5xl text-center py-8 px-4 text-nowrap'
+				style='view-transition-name: book-title'
+			>
+				<span class='tracking-[14.3px] ml-3 md:tracking-[28.9px] md:ml-7'>Librería de</span>
+				<span class='block text-[67px] md:text-[107px]'>Fran11799</span>
+			</h1>
 		</header>
 		<div class='grid grid-cols-1 md:grid-cols-[350px_1fr] gap-x-12 mt-4 md:mt-20 px-8'>
 			<div class='flex flex-col mb-10'>
@@ -82,7 +88,9 @@ if (!info) {
 						{info.author}
 					</a>
 				</p>
-				<p class='text-5xl font-bold font-serif mt-10 text-red-700 drop-shadow-md shadow-red-950'>
+				<p
+					class='text-5xl font-bold font-serif mt-10 text-red-700 drop-shadow-md shadow-red-950 mb-10'
+				>
 					{info.price} €
 				</p>
 			</aside>

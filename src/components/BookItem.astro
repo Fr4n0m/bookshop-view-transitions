@@ -4,11 +4,12 @@ export interface Props {
 	title: string
 	description: string
 	author: string
+	authorLink: string
 	image: string
 	price: number
 }
 
-const { id, title, image, description, author, price } = Astro.props
+const { id, title, image, description, author, authorLink, price } = Astro.props
 ---
 
 <a class='inline-block' href={`/${id}`}>
@@ -16,19 +17,15 @@ const { id, title, image, description, author, price } = Astro.props
 		class='aspect-[552/839] h-full object-cover w-full max-w-full rounded hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl'
 		src={image}
 		alt={title}
+		style={`view-transition-name: book-${id}`}
 	/>
 	<div class='bottom-0 left-0 p-2 text-black'>
 		<h2 class='text-lg font-bold hover:text-black/70'>{title}</h2>
 		<p class='text-sm'>{description}</p>
 		<p class='text-sm text-black'>
 			By&nbsp;
-			<a
-				class='text-black font-bold hover:underline'
-				href='https://es.wikipedia.org/wiki/George_R._R._Martin'
-			>
-				{author}
-			</a>
+			<a class='text-black font-bold hover:underline' href={authorLink}>{author}</a>
 		</p>
-		<p class='text-3xl text-red-600 font-bold'>${price}</p>
+		<p class='text-3xl text-red-600 font-bold'>{price}€</p>
 	</div>
 </a>
