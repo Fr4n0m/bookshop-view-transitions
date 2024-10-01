@@ -1,54 +1,38 @@
-# Astro Starter Kit: Basics
+# Bookshop View Transitions
 
-```sh
-npm create astro@latest -- --template basics
-```
+A demo project showcasing a bookshop website with smooth view transitions using Astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Smooth view transitions between pages using Astro's built-in view transition API
+- Responsive design for a great user experience on various devices
+- Simple and clean UI design
+- Demo data for books, including images, titles, authors, and prices
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Pages
 
-## 🚀 Project Structure
+- **Index:** A list of books with images, titles, and prices
+- **Book:** A detailed page for each book, including author and description
+- **404:** A custom 404 page for when a book is not found
 
-Inside of your Astro project, you'll see the following folders and files:
+## Components
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Layout:** A reusable layout component for all pages
+- **Title:** A component for displaying the title of the bookshop
+- **ListBooks:** A component for listing books on the index page
+- **Footer:** A component for displaying the footer on all pages
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Technologies Used
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Astro:** A modern web framework for building fast, scalable websites
+- **HTML:** HyperText Markup Language for structuring content
+- **CSS:** Cascading Style Sheets for styling and layout
+- **JavaScript:** For adding interactivity and dynamic effects
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
 
-## 🧞 Commands
+This project is licensed under the MIT License. See LICENSE for details.
 
-All commands are run from the root of the project, from a terminal:
+## Contributing
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
