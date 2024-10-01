@@ -13,10 +13,13 @@ const { id, title, image, description, author, authorLink, price } = Astro.props
 ---
 
 <a class='inline-block book scale-75 -ml-5 md:ml-2 md:scale-100' href={`/${id}`}>
-	<div
-		class='book-cover'
-		style={`background-image: url('${image}'); view-transition-name: book-${id}`}
-	>
+	<div class='book-cover'>
+		<img
+			src={image}
+			alt={title}
+			class='object-cover w-full h-full'
+			style={`view-transition-name: book-${id}`}
+		/>
 		<div class='effect'></div>
 		<div class='light'></div>
 	</div>
