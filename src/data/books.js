@@ -2,7 +2,7 @@ export const books = [
 	{
 		id: 'GOT-1',
 		title: 'JUEGO DE TRONOS',
-		image: 'images/got-1.webp',
+		image: '/public/images/got-1.webp',
 		author: 'George R. R. Martin',
 		authorLink: 'https://es.wikipedia.org/wiki/George_R._R._Martin',
 		description: 'LOS LIBROS QUE INSPIRARON LA SERIE JUEGO DE TRONOS DE HBO',
