@@ -49,32 +49,56 @@ const { title } = Astro.props
 </html>
 
 <script>
+	let scrollPosition = 0
+
+	// Guardar la posición del scroll antes de navegar
+	window.addEventListener('beforeunload', () => {
+		scrollPosition = window.scrollY
+	})
+
+	async function fetchAndReplaceContent(toUrl) {
+		const response = await fetch(toUrl.pathname)
+		const text = await response.text()
+
+		const parser = new DOMParser()
+		const doc = parser.parseFromString(text, 'text/html')
+
+		// Extraer el contenido del nuevo body
+		const newBodyContent = doc.body.innerHTML
+
+		return newBodyContent
+	}
+
 	if (document.startViewTransition) {
 		window.navigation.addEventListener('navigate', (event) => {
 			const toUrl = new URL(event.destination.url)
 
-			// es una página externa? si es así, lo ignoramos
+			// Ignorar si es una página externa
 			if (location.origin !== toUrl.origin) return
 
-			// si es una navegación en el mismo dominio (origen)
+			// Interceptar la navegación
 			event.intercept({
 				async handler() {
-					// vamos a cargar la página de destino
-					// utilizando un fetch para obtener el HTML
-					const response = await fetch(toUrl.pathname) // /clean-code
-					const text = await response.text()
-					// quedarnos sólo con el contenido del html dentro de la etiqueta body
-					// usamos un regex para extraerlo
-					const [, data] = text.match(/<body>([\s\S]*)<\/body>/i)
+					try {
+						const newBodyContent = await fetchAndReplaceContent(toUrl)
 
-					// utilizar la api de View Transition API
-					document.startViewTransition(() => {
-						// el scroll hacia arriba del todo
-						document.body.innerHTML = data
-						document.documentElement.scrollTop = 0
-					})
+						// Iniciar la transición de vista
+						document.startViewTransition(() => {
+							document.body.innerHTML = newBodyContent
+
+							// Restaurar la posición del scroll
+							document.documentElement.scrollTop = scrollPosition
+						})
+					} catch (error) {
+						console.error('Error en la transición de vista: ', error)
+					}
 				}
 			})
 		})
 	}
+
+	// Al cargar la página, restaurar la posición del scroll si existe
+	document.addEventListener('DOMContentLoaded', () => {
+		document.documentElement.scrollTop = scrollPosition
+	})
 </script>
