@@ -46,19 +46,17 @@ if (!info) {
 		</header>
 		<div class='grid grid-cols-1 md:grid-cols-[350px_1fr] gap-x-12 mt-4 md:mt-20 px-8'>
 			<div class='flex flex-col mb-10'>
-				<picture class='md:mb-8 -ml-2 w-full relative' title={info.title}>
-					<div class='book w-full h-full md:max-w-full aspect-[552/839] scale-75 md:scale-100'>
-						<div
-							class='book-cover'
-							style={`background-image: url(${info.image}); view-transition-name: book-${info.id};`}
-							title={`Portada del libro ${info.title}`}
-						>
-							<div class='effect'></div>
-							<div class='light'></div>
-						</div>
-						<div class='book-inside'></div>
+				<div class='book-big -ml-2 md:-ml-0 scale-75 md:scale-100'>
+					<div
+						class='book-cover'
+						style={`background-image: url(${info.image}); view-transition-name: book-${info.id};`}
+						title={`Portada del libro ${info.title}`}
+					>
+						<div class='effect'></div>
+						<div class='light'></div>
 					</div>
-				</picture>
+					<div class='book-inside'></div>
+				</div>
 
 				<a
 					href='#'
