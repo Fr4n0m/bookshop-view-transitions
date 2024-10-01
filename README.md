@@ -36,3 +36,7 @@ This project is licensed under the MIT License. See LICENSE for details.
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+## Web demo
+
+You can try the web demo at [https://bookshop-view-transitions.vercel.app/](https://bookshop-view-transitions.vercel.app/).
